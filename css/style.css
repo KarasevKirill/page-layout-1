@@ -1,0 +1,161 @@
+:root {
+    --color-black: #202020;
+    --color-white: #FFFFFF;
+    --color-light-gray: #C2C2C2;
+    --color-violet: #5528FF;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+}
+
+.nav > li {
+    margin-left: 15px;
+}
+
+.nav > li > a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-text {
+    color: var(--color-black);
+    font-size: 24px;
+}
+
+.logo-img {
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-image: url(/img/logo.svg);
+    margin-right: 20px;
+}
+
+.nav-btn {
+    color: var(--color-white);
+    background-color: var(--color-violet);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    font-weight: 700;  
+}
+
+.btn {
+    color: var(--color-white);
+    background-color: var(--color-violet);
+    border-radius: 10px;
+    border: none;
+    padding: 10px 45px;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.page {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.page h2 {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: var(--color-white);
+    padding: 5px 15px;
+    top: -25px;
+    color: var(--color-light-gray);
+}
+
+.page-top {
+    border-top: 1px solid var(--color-light-gray);
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.title-main {
+    font-weight: 700;
+    font-size: 55px;
+    color: var(--color-black);
+}
+
+.text-main {
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #4F4F4F;
+}
+
+.services {
+    display: grid;
+    grid-template: 50% 50% / 50% 50%;
+}
+
+.services h3 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.services p {
+   font-size: 14px; 
+   color: #B2B2B2;
+   font-weight: 400;
+   line-height: 1.5;
+}
+
+.services-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.services-img {
+    flex-basis: 120px;
+    text-align: center;
+}
+
+.services-text {
+    flex-basis: calc(100% - 120px);
+}
+
+.clients {
+    display: grid;
+    grid-template: 120px 120px 120px / repeat(4, 25%);
+    text-align: center;
+    margin-top: 30px;
+}
