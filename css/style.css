@@ -155,14 +155,49 @@ body {
 
 .clients {
     display: grid;
-    grid-template: repeat(3, 120px) / repeat(4, 25%);
+    grid-template: repeat(2, 1fr) / repeat(4, 25%);
+    grid-row-gap: 25px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .team {
-    margin-top: 30px;
+    margin-top: 25px;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    text-align: center;
+    grid-row-gap: 25px;
+    
 }
+
+.team-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.team-item img {
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.team-item > div {
+    flex-basis: calc(100% - 100px);
+}
+
+.team h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.team p {
+   font-size: 14px; 
+   color: #B2B2B2;
+   font-weight: 400;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F7F7F7;
+}
+
