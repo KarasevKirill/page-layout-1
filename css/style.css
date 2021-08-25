@@ -201,3 +201,24 @@ body {
     background-color: #F7F7F7;
 }
 
+.social {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;    
+}
+
+.social > li {
+    margin-left: 15px;
+}
+
+.social > li > a {
+    text-decoration: none;
+    color: #B2B2B2;
+    font-size: 24px;
+}
+
+.box-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
