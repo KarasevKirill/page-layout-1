@@ -27,6 +27,12 @@ $headerWrapMaxWidth: 1180px;
     align-items: center;
 }
 
+@mixin paddingsWrapHeader {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
 body {
     font-family: $pageFontFamily;
 }
@@ -50,25 +56,22 @@ body {
 
 .header {
     @include flexContainerAligment;
+    @include paddingsWrapHeader;
 
     width: 100%;
     max-width: $headerWrapMaxWidth;
     margin: 0 auto;
     align-items: center;
     padding-top: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
     font-weight: $fwBold;
 }
 
 .wrap {
+    @include paddingsWrapHeader;
+
     width: 100%;
     max-width: $headerWrapMaxWidth;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
 }
 
 .box-footer {
@@ -181,15 +184,6 @@ body {
     line-height: 1.5;
     font-weight: $fwNormal;
     color: $colorSmokeGray;
-}
-
-.wrap {
-    width: 100%;
-    max-width: $headerWrapMaxWidth;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-sizing: border-box;
 }
 
 .page-top {
