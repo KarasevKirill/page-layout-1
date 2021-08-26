@@ -1,0 +1,252 @@
+$colorBlack:            #202020;
+$colorWhite:            #FFFFFF;
+$colorLightGray:        #C2C2C2;
+$colorSmokeGray:        #4F4F4F;
+$colorLightSmokeGray:   #B2B2B2;
+$colorViolet:           #5528FF;
+$footerBgColor:         #F7F7F7;
+
+$pageFontFamily:    'Ubuntu', sans-serif;
+$fwNormal:          400;
+$fwBold:            700;
+$fsLogo:            24px;
+$fsBtn:             24px;
+$fsTitle:           55px;
+$fsTextMain:        32px;
+$fsNav:             14px;
+$fsSocial:          24px;
+$fsH2:              14px;
+$fsH3:              28px;
+$fsP:               14px;
+
+$headerWrapMaxWidth: 1180px;
+
+@mixin flexContainerAligment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    font-family: $pageFontFamily;
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: $fsNav;
+
+    li {
+        margin-left: 15px;
+
+        a {
+            color: $colorBlack;
+            text-decoration: none;
+        }
+    }
+}
+
+.header {
+    @include flexContainerAligment;
+
+    width: 100%;
+    max-width: $headerWrapMaxWidth;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.wrap {
+    width: 100%;
+    max-width: $headerWrapMaxWidth;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.box-footer {
+    @include flexContainerAligment;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $footerBgColor;
+}
+
+.social {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+    
+    li {
+        margin-left: 15px;
+
+        a {
+            text-decoration: none;
+            color: $colorLightSmokeGray;
+            font-size: $fsSocial;
+        }
+    }
+}
+
+.team {
+    margin-top: 25px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-row-gap: 25px;
+
+    div {
+        flex-basis: calc(100% - 100px);
+    }
+
+    p {
+        font-size: $fsP; 
+        color: $colorLightSmokeGray;
+        font-weight: $fwNormal;
+     }
+
+     h3 {
+        font-size: $fsH3;
+        font-weight: $fwBold;
+    }
+}
+
+.team-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+}
+
+.clients {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 25%);
+    grid-row-gap: 25px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.services-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.services-img {
+    flex-basis: 120px;
+    text-align: center;
+}
+
+.services-text {
+    flex-basis: calc(100% - 120px);
+}
+
+.services {
+    display: grid;
+    grid-template: 50% 50% / 50% 50%;
+
+    h3 {
+        font-size: $fsH3;
+        font-weight: $fwNormal;
+    }
+
+    p {
+        font-size: $fsP; 
+        color: $colorLightSmokeGray;
+        font-weight: $fwNormal;
+        line-height: 1.5;
+     }
+}
+
+.title-main {
+    font-weight: $fwBold;
+    font-size: $fsTitle;
+    color: $colorBlack;
+}
+
+.text-main {
+    font-size: $fsTextMain;
+    line-height: 1.5;
+    font-weight: $fwNormal;
+    color: $colorSmokeGray;
+}
+
+.wrap {
+    width: 100%;
+    max-width: $headerWrapMaxWidth;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+.page-top {
+    border-top: 1px solid $colorLightGray;
+}
+
+.page {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+
+    h2 {
+        position: absolute;
+        font-size: $fsH2;
+        font-weight: 300;
+        background-color: $colorWhite;
+        padding: 5px 15px;
+        top: -25px;
+        color: $colorLightGray;
+    }
+}
+
+.btn {
+    color: $colorWhite;
+    background-color: $colorViolet;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 45px;
+    font-weight: $fwNormal;
+    font-size: $fsBtn;
+}
+
+.nav-btn {
+    color: $colorWhite;
+    background-color: $colorViolet;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    font-weight: $fwBold;  
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-text {
+    color: $colorBlack;
+    font-size: $fsLogo;
+}
+
+.logo-img {
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-image: url(/img/logo.svg);
+    margin-right: 20px;
+}
+
